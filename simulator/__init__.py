@@ -1,6 +1,5 @@
 # file required to get python to recognise this as a module
-from simulator.example import simulator_test
-
+from example import simulator_test
 
 __all__ = ['example']
 
