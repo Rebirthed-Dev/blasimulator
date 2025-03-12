@@ -8,7 +8,7 @@ class MatchState(Enum):
     INNING_START = 1
     INNING_END = 2
     GAME_END = 3
-    LINEUP_BAT = 3
+    LINEUP_BAT = 4
 
 class Match:
     def __init__(self, home: team.Team, away: team.Team):
