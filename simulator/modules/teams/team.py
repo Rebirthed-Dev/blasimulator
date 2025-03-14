@@ -1,4 +1,4 @@
-from simulator.modules.players.player import Player
+from simulator.modules.players.player import Player, FieldPosition
 
 
 class Team:
@@ -17,3 +17,11 @@ class Team:
 
     def get_lineup(self):
         return [x for x in self.players if x.isLineupOrRotation]
+
+    def get_player_at_position(self, position: FieldPosition):
+        output = []
+        for player in self.players:
+            if player.position == position:
+                output.append(player)
+
+        return output

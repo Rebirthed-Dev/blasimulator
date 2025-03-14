@@ -61,6 +61,12 @@ class Match:
         else:
             return self.away
 
+    def get_current_fielding_team(self):
+        if self.half == 0:
+            return self.away
+        else:
+            return self.home
+
     def check_if_player_on_base(self, player):
         for base in self.bases:
             if player in base:
@@ -89,6 +95,9 @@ class Match:
     def step(self):
         self.stateFunctions[self.state]()
         return self.output
+
+    def determine_batting_target_position(self):
+        return
 
     def state_game_start (self):
         # do setup and enter initial inning
@@ -139,7 +148,7 @@ class Match:
             exit(0)
 
     def state_bat(self):
-        return
+        fielders = self.get_current_fielding_team()
 
 
 
